@@ -1,0 +1,245 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body p, body h1, body h2 {
+  margin: 0;
+}
+
+body .titles h2, body .titles h1 {
+  font-size: 3rem;
+  color: #f55536;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+body .titles :nth-child(2) {
+  color: #6610f2;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+}
+
+body .name {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  white-space: nowrap;
+  width: 100%;
+  top: 0;
+  padding: 2rem;
+  background-color: transparent;
+}
+
+body .name .titles {
+  margin-right: 2rem;
+}
+
+body .name .titles h1 {
+  font-size: 8rem;
+}
+
+body .slogan {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  margin: 30rem 0rem 10rem;
+}
+
+body .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .date p {
+  font-size: 5rem;
+  color: #f55536;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+}
+
+body .date p:first-child {
+  color: #6610f2;
+}
+
+body .about {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10rem auto;
+}
+
+body .about .titles {
+  margin-right: 3rem;
+}
+
+body .about p {
+  margin-bottom: 1rem;
+}
+
+body .about p:last-child {
+  margin-bottom: 0rem;
+}
+
+body .about p b {
+  font-weight: 700;
+  color: #f55536;
+}
+
+body .suggestions {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  margin: 0rem auto 10rem;
+}
+
+body .suggestions .content {
+  margin-right: 3rem;
+}
+
+body .suggestions .content .titles {
+  margin-bottom: 2rem;
+}
+
+body .suggestions form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  margin: 0rem;
+}
+
+body .suggestions form > div textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 20rem;
+  padding: 2rem;
+  border: 0.25rem solid black;
+  border-top: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+body .suggestions form > div .input-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% - 1rem);
+  height: 1rem;
+  padding: 0.25rem 0.5rem;
+  background-color: black;
+}
+
+body .suggestions form > div .input-controls div {
+  display: block;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #F55536;
+}
+
+body .suggestions form > div .input-controls :nth-child(2) {
+  margin-left: 0.5rem;
+  background-color: #E3F438;
+}
+
+body .suggestions form > div .input-controls :nth-child(3) {
+  margin-left: 0.5rem;
+  background-color: #38F446;
+}
+
+body .suggestions form button {
+  z-index: 2;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 1rem 2rem;
+  margin: -2rem -2rem 0rem 0rem;
+  border: none;
+  color: white;
+  background: linear-gradient(98.1deg, #6610F2 18.55%, #F55536 69.66%), #F55536;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+body .suggestions form button:hover {
+  color: black;
+}
+
+body footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem 0rem;
+  background: linear-gradient(98.1deg, #6610F2 18.55%, #F55536 69.66%), #F55536;
+  color: white;
+}
+
+body footer .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body footer .contacts :first-child {
+  text-transform: uppercase;
+}
+
+body footer .social div {
+  margin-top: 1rem;
+}
+
+body footer .social div img {
+  width: 2.5rem;
+}
+
+body footer .social div :first-child {
+  margin-right: 0.5rem;
+}
+
+body footer .madeBy a {
+  color: white;
+  text-decoration: none;
+}
+
+body footer .madeBy a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=index.css.map */
