@@ -37,6 +37,18 @@ body {
 
       h1 {
         font-size: 8rem;
+
+        &:first-child {
+          span {
+            -webkit-text-fill-color: initial;
+          }
+        }
+        span {
+          &:first-child {
+            margin-right: -1rem;
+            color: rgb(245,85,54);
+          }
+        }
       }
     }
   }
@@ -209,6 +221,80 @@ body {
         &:hover {
           text-decoration: underline;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    .name {
+      position: initial;
+    }
+
+    .slogan {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      margin: 5rem 0rem 5rem;
+
+      .titles {
+        margin-bottom: 1rem;
+
+        &:first-child {
+          margin-bottom: 0rem;
+        }
+      }
+    }
+
+    .date {
+      p {
+        font-size: 2rem;
+        -webkit-text-stroke-width: 1px;
+      }
+    }
+
+    .about {
+      width: 90%;
+      flex-direction: column;
+      margin: 5rem auto;
+  
+      .titles {
+        margin: 0rem 0rem 1rem 0rem;
+      }
+    }
+
+    .suggestions {
+      width: 90%;
+      flex-direction: column;
+      margin: 0rem auto 5rem;
+  
+      .content {
+        margin: 0rem 0rem 3rem 0rem;
+  
+        .titles {
+          margin-bottom: 1rem;
+        }
+      }
+  
+      form {
+        width: 90%;
+      }
+    }
+
+    footer {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      padding: 0rem;
+  
+      .contacts {
+        align-items: center;
+      }
+  
+      .social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
     }
   }

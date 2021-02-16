@@ -43,6 +43,15 @@ body .name .titles h1 {
   font-size: 8rem;
 }
 
+body .name .titles h1:first-child span {
+  -webkit-text-fill-color: initial;
+}
+
+body .name .titles h1 span:first-child {
+  margin-right: -1rem;
+  color: #f55536;
+}
+
 body .slogan {
   display: -ms-grid;
   display: grid;
@@ -241,5 +250,81 @@ body footer .madeBy a {
 
 body footer .madeBy a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 900px) {
+  body .name {
+    position: initial;
+  }
+  body .slogan {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    margin: 5rem 0rem 5rem;
+  }
+  body .slogan .titles {
+    margin-bottom: 1rem;
+  }
+  body .slogan .titles:first-child {
+    margin-bottom: 0rem;
+  }
+  body .date p {
+    font-size: 2rem;
+    -webkit-text-stroke-width: 1px;
+  }
+  body .about {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 5rem auto;
+  }
+  body .about .titles {
+    margin: 0rem 0rem 1rem 0rem;
+  }
+  body .suggestions {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0rem auto 5rem;
+  }
+  body .suggestions .content {
+    margin: 0rem 0rem 3rem 0rem;
+  }
+  body .suggestions .content .titles {
+    margin-bottom: 1rem;
+  }
+  body .suggestions form {
+    width: 90%;
+  }
+  body footer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    padding: 0rem;
+  }
+  body footer .contacts {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body footer .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=index.css.map */
