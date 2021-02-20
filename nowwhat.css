@@ -1,0 +1,260 @@
+:root {
+    --prim-color: #F55536;
+    --sec-color: #6610F2;
+    --w-color: white;
+    --b-color: black;
+}
+
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+section {
+    width: 90%;
+    margin: 4rem auto 4rem;
+}
+
+.title {
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.title h1:first-child,
+.title h2:first-child {
+    color: var(--prim-color);
+}
+
+.title h1:last-child,
+.title h2:last-child {
+    color: var(--sec-color);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+}
+
+/*-------------------NAME------------------*/
+.head {
+    overflow-x: hidden;
+    width: 100vw;
+    margin-top: 0px;
+    padding: 2vh 0vh;
+    background-color: var(--w-color);
+}
+
+.c-my-flooper {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    font-size: 4rem;
+}
+
+.head span:first-child {
+    color: var(--prim-color);
+}
+
+.head span:last-child {
+    position: relative;
+    z-index: -3;
+    padding-right: 2rem;
+    color: var(--sec-color);
+    font-style: normal;
+}
+
+/*-------------------SLOGAN------------------*/
+.slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+
+.slogan .title:nth-child(2) {
+    margin: 2rem 0rem;
+}
+
+/*-------------------COUNTDOWN------------------*/
+.countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown p {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+}
+
+.countdown p:first-child {
+    -webkit-text-stroke-width: 1px;
+    color: var(--prim-color);
+    font-size: 2rem;
+}
+
+.countdown p:last-child {
+    color: var(--sec-color);
+    font-size: 5rem;
+}
+
+/*-------------------ABOUT------------------*/
+.suggestion .title,
+.info .title {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.info .text p {
+    margin-bottom: 1rem;
+}
+
+.info .text p:last-child {
+    margin-bottom: 0rem;
+}
+
+/*-------------------SUGGESTIONS------------------*/
+form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+textarea {
+    width: calc(100% - (4.5rem));
+    height: 20rem;
+    display: flex;
+    padding: 2rem;
+    border: 0.25rem solid var(--b-color);
+    border-top: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.frame {
+    width: calc(100% - 1rem);
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    background: var(--b-color);
+    padding: 0.25rem 0.5rem;
+}
+
+.frame > div {
+    border-radius: 50%;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+#c1 {
+    background: #F55536;
+}
+
+#c2 {
+    background: #E3F438;
+}
+
+#c3 {
+    background: #38F446;
+}
+
+input[type="submit"] {
+    z-index: 1;
+    align-self: flex-end;
+    margin: -2rem -2rem 0rem 0rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    background: linear-gradient(-45deg, var(--prim-color), var(--sec-color));
+    color: var(--w-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+}
+
+/*-------------------FOOTER---------------------*/
+footer {
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 2rem 0rem;
+    color: var(--w-color);
+    background: linear-gradient(45deg, var(--prim-color), var(--sec-color));
+    text-align: center;
+    font-weight: bold;
+}
+
+.logos {
+    margin-top: 1rem;
+}
+
+.logos img {
+    width: 2rem;
+}
+.logos>a:first-child {
+    margin-right: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    section {
+        margin: 10rem auto 10rem;
+    }
+
+    .head {
+        position: fixed;
+        top: 0rem;
+    }
+
+    .c-my-flooper {
+        font-size: 7rem;
+    }
+
+    .slogan {
+        flex-direction: row;
+        margin-top: 30rem;
+        font-size: 3rem;
+    }
+
+    .countdown p:first-child {
+        -webkit-text-stroke-width: 1.5px;
+        font-size: 5rem;
+    }
+
+    .suggestion .title,
+    .info .title {
+        font-size: 3rem;
+    }
+
+    .info {
+        display: flex;
+        width: 50%;
+    }
+
+    .info .title {
+        margin-right: 3rem;
+        margin-bottom: 0rem;
+    }
+
+    .suggestion {
+        display: flex;
+    }
+
+    form {
+        width: 40%;
+        margin-top: 0rem;
+        margin-left: 6rem;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
