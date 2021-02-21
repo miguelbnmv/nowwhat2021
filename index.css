@@ -42,7 +42,6 @@ section {
     width: 100vw;
     margin-top: 0px;
     padding: 2vh 0vh;
-    background-color: var(--w-color);
 }
 
 .c-my-flooper {
@@ -85,12 +84,8 @@ section {
     align-items: center;
 }
 
-.countdown p {
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1.5px;
-}
-
 .countdown p:first-child {
+    -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     color: var(--prim-color);
     font-size: 2rem;
@@ -106,6 +101,10 @@ section {
 .info .title {
     margin-bottom: 1rem;
     font-size: 2rem;
+}
+
+.info .text b {
+    color: var(--prim-color);
 }
 
 .info .text p {
@@ -208,18 +207,12 @@ footer {
         margin: 10rem auto 10rem;
     }
 
-    .head {
-        position: fixed;
-        top: 0rem;
-    }
-
     .c-my-flooper {
         font-size: 7rem;
     }
 
     .slogan {
         flex-direction: row;
-        margin-top: 30rem;
         font-size: 3rem;
     }
 
