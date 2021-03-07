@@ -5,6 +5,10 @@
     --b-color: black;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body,
 h1,
 h2,
@@ -15,8 +19,9 @@ p {
 }
 
 section {
+    padding-top: 15vh;
     width: 90%;
-    margin: 4rem auto 4rem;
+    margin: auto;
 }
 
 .title {
@@ -36,20 +41,29 @@ section {
     -webkit-text-stroke-width: 1.5px;
 }
 
+.hide {
+    display: none;
+}
+
 /*-------------------NAME------------------*/
 .head {
     overflow-x: hidden;
+    position: fixed;
+    top: 0;
     width: 100vw;
     margin-top: 0px;
-    padding: 2vh 0vh;
+}
+
+.head>div:first-child {
+    display: none;
 }
 
 .c-my-flooper {
     width: 100%;
-    display: flex;
     flex-wrap: nowrap;
     white-space: nowrap;
-    font-size: 4rem;
+    font-size: 2rem;
+    padding: 2vh 0;
 }
 
 .head span:first-child {
@@ -64,13 +78,40 @@ section {
     font-style: normal;
 }
 
+/*-------------------NAVBAR-------------------*/
+.navbar {
+    display: none;
+}
+
+.mobile {
+    position: fixed;
+    background-color: var(--w-color);
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem 0rem;
+}
+
+.mobile>div {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
 /*-------------------SLOGAN------------------*/
 .slogan {
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 25vh;
+}
+
+.slogan>div:first-child {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     font-size: 2rem;
+    width: 100%;
 }
 
 .slogan .title:nth-child(2) {
@@ -82,6 +123,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 8rem;
 }
 
 .countdown p:first-child {
@@ -98,7 +140,10 @@ section {
 
 /*-------------------ABOUT------------------*/
 .suggestion .title,
-.info .title {
+.info .title,
+.opor .title,
+.prog .title,
+.patro .title {
     margin-bottom: 1rem;
     font-size: 2rem;
 }
@@ -113,6 +158,91 @@ section {
 
 .info .text p:last-child {
     margin-bottom: 0rem;
+}
+
+/*---------------------OPORTUNITIES-----------------*/
+.opor {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+}
+
+.opor div:not(:first-child) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opor div:not(:first-child) p {
+    width: 80%;
+}
+
+.opor div:not(:first-child) p span {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.orange,
+.purple-o {
+    color: var(--w-color);
+    background-color: var(--prim-color);
+}
+
+.purple,
+.orange-p {
+    color: var(--w-color);
+    background-color: var(--sec-color);
+}
+
+/*----------------------SCHEDULE-------------------*/
+
+
+/*----------------------SPONSORS-------------------*/
+.patro>div {
+    width: 100%;
+}
+
+.patro-powered,
+.patro-sponsor {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.patro-powered .title,
+.patro-sponsor .title {
+    width: 100%;
+}
+
+.patro-powered div:first-child,
+.patro-sponsor div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.patro span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    font-size: 1.5rem;
+}
+
+.patro-powered a,
+.patro-sponsor div:last-child {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.patro img {
+    width: 20rem;
 }
 
 /*-------------------SUGGESTIONS------------------*/
@@ -143,7 +273,7 @@ textarea {
     padding: 0.25rem 0.5rem;
 }
 
-.frame > div {
+.frame>div {
     border-radius: 50%;
     width: 0.75rem;
     height: 0.75rem;
@@ -185,6 +315,7 @@ footer {
     align-items: center;
     justify-items: center;
     padding: 2rem 0rem;
+    margin-top: 15vh;
     color: var(--w-color);
     background: linear-gradient(45deg, var(--prim-color), var(--sec-color));
     text-align: center;
@@ -198,22 +329,78 @@ footer {
 .logos img {
     width: 2rem;
 }
+
 .logos>a:first-child {
     margin-right: 1rem;
 }
 
-@media only screen and (min-width: 768px) {
+/*-------------------DESKTOP---------------------*/
+@media only screen and (min-width: 1150px) {
     section {
-        margin: 10rem auto 10rem;
+        padding-top: 25vh;
+        min-height: 75vh;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .hide {
+        display: block;
+    }
+
+    /*-------------------HEAD---------------------*/
+    .head>div:first-child {
+        display: flex;
+        width: 100%;
+        height: 15vh;
+        background-color: var(--w-color);
     }
 
     .c-my-flooper {
-        font-size: 7rem;
+        display: flex;
     }
 
-    .slogan {
+    .mobile {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 5vh;
+        background-color: var(--sec-color);
+        border-left: none;
+        border-right: none;
+    }
+
+    .navbar a {
+        width: 20%;
+        padding: 0.5rem 0rem;
+        color: var(--w-color);
+        background-color: var(--sec-color);
+        text-decoration: none;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .navbar a:hover {
+        color: var(--sec-color);
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1.5px;
+        background-color: var(--w-color);
+    }
+
+    /*-------------------SLOGAN---------------------*/
+    .slogan>div:first-child {
         flex-direction: row;
         font-size: 3rem;
+    }
+
+    .countdown {
+        margin-top: 0;
     }
 
     .countdown p:first-child {
@@ -222,13 +409,21 @@ footer {
     }
 
     .suggestion .title,
-    .info .title {
+    .info .title,
+    .opor .title,
+    .prog .title,
+    .patro .title {
         font-size: 3rem;
     }
 
+    /*-------------------ABOUT---------------------*/
     .info {
-        display: flex;
         width: 50%;
+    }
+
+    .info>div,
+    .suggestion>div {
+        display: flex;
     }
 
     .info .title {
@@ -236,8 +431,71 @@ footer {
         margin-bottom: 0rem;
     }
 
-    .suggestion {
+    /*-------------------OPORTUNITIES---------------------*/
+    .opor {
+        grid-gap: 4rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .orange-p {
+        background-color: var(--prim-color);
+    }
+
+    .purple-o {
+        background-color: var(--sec-color);
+    }
+
+    /*-------------------SCHEDULE---------------------*/
+    .prog>div:first-child {
         display: flex;
+    }
+
+    .days {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 5vh;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1.5px;
+    }
+
+    .days a {
+        width: 20%;
+        padding: 0.5rem 0rem;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+
+    .days a:checked {
+        -webkit-text-fill-color: black;
+    }
+
+    /*-------------------SPONSOR---------------------*/
+    .patro-sponsor div:last-child {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .patro span {
+        font-size: 2rem;
+    }
+
+    .patro img {
+        width: 100%;
+
+    }
+
+    /*-------------------SUGGESTION--------------------*/
+    .suggestion>div {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
     }
 
     form {
@@ -246,7 +504,9 @@ footer {
         margin-left: 6rem;
     }
 
+    /*-------------------FOOTER---------------------*/
     footer {
+        margin-top: 0;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
     }
