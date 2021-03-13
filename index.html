@@ -59,7 +59,7 @@
         <div id="mobile-navbar">
             <a class="title" href="#about">Sobre</a>
             <a class="title" href="#oportunities">Oportunidades</a>
-            <a class="title" href="#schedule">Programa</a>
+            <!--<a class="title" href="#schedule">Programa</a>-->
             <a class="title" href="#sponsors">Patrocinadores</a>
             <a class="title" href="#sugges">Sugestões</a>
         </div>
@@ -95,10 +95,10 @@
                 <h1><span>NOW</span><span>WHAT?</span></h1>
             </div>
         </div>
-        <div id="navbar">
+        <div class="navbar">
             <a class="title" href="#about">Sobre</a>
             <a class="title" href="#oportunities">Oportunidades</a>
-            <a class="title" href="#schedule">Programa</a>
+            <!--<a class="title" href="#schedule">Programa</a>-->
             <a class="title" href="#sponsors">Patrocinadores</a>
             <a class="title" href="#sugges">Sugestões</a>
         </div>
@@ -504,10 +504,7 @@
                     <h2>Sugestões</h2>
                     <h2>Sugestões</h2>
                 </div>
-                <p>Gostavas de ver algum tema ou orador nesta edição do Now What?<br>Deixa as tuas sugestões na caixa
-                    que se
-                    segue.
-                </p>
+                <p>Gostavas de ver algum tema ou orador nesta edição do Now What?<br>Deixa as tuas sugestões na caixa que se segue.</p>
             </div>
             <form action="https://formspree.io/f/xeqpwvqq" method="POST">
                 <div>
@@ -573,17 +570,14 @@
         if (temp % 2 == 0) {
             $("#mobile-navbar").css("display", "flex");
             $("#mobile").attr("src", "images/icons/close.svg");
-            $("html, body").css({
-                overflow: 'hidden',
-                height: "100%"
-            });
+            $("#mobile").css("position", "fixed");
+            $("#mobile").css("right", "0");
+            $("#mobile").css("padding-right", "2rem");
         } else {
             $("#mobile-navbar").css("display", "none");
             $('#mobile').attr('src', 'images/icons/hamburger.svg');
-            $('html, body').css({
-                overflow: "auto",
-                height: "auto"
-            });
+            $("#mobile").css("position", "inherit");
+            $("#mobile").css("padding-right", "0rem");
         }
         temp++;
     });
@@ -591,10 +585,7 @@
     $("#mobile-navbar a").click(function () {
         $("#mobile-navbar").css("display", "none");
         $('#mobile').attr('src', 'images/icons/hamburger.svg');
-        $('html, body').css({
-            overflow: "auto",
-            height: "auto"
-        });
+        temp++;
     });
 
     $("#22").click(function () {
