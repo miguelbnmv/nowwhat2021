@@ -90,6 +90,7 @@ section {
     justify-content: space-around;
     width: 100vw;
     height: 100vh;
+    padding-bottom: 20vh;
     background-color: var(--sec-color);
 }
 
