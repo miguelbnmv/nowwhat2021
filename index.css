@@ -44,7 +44,7 @@ section {
 .title h2:last-child {
     color: var(--sec-color);
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-width: 1px;
 }
 
 .hide {
@@ -217,7 +217,7 @@ section {
 .days span {
     font-size: 2rem;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-width: 1px;
     cursor: pointer;
 }
 
@@ -530,7 +530,7 @@ footer {
     }
 
     .countdown p:first-child {
-        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-width: 1px;
         font-size: 5rem;
     }
 

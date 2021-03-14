@@ -439,7 +439,7 @@
                     <span class="hide">POWERED BY</span>
                     <span class="hide">TERA</span>
                 </div>
-                <a href="https://redlight.dev/">
+                <a href="https://redlight.dev/" target="_blank">
                     <img src="images/sponsors/redlight.png" alt="RedLight">
                 </a>
 
@@ -447,15 +447,15 @@
             <div class="patro-sponsor mega">
                 <div class="title">
                     <span>SPONSORED BY</span>
-                    <span>MEGA</span>
+                    <span>GIGA</span>
                     <span class="hide">SPONSORED BY</span>
-                    <span class="hide">MEGA</span>
+                    <span class="hide">GIGA</span>
                 </div>
                 <div>
-                    <a href="https://www.criticalsoftware.com/pt">
+                    <a href="https://www.criticalsoftware.com/pt" target="_blank">
                         <img src="images/sponsors/critical.png" alt="Critical Software">
                     </a>
-                    <a href="https://www.imaginarycloud.com/">
+                    <a href="https://www.imaginarycloud.com/" target="_blank">
                         <img src="images/sponsors/imaginary.svg" alt="Imaginary Cloud">
                     </a>
                 </div>
@@ -463,21 +463,21 @@
             <div class="patro-sponsor giga">
                 <div class="title">
                     <span>SPONSORED BY</span>
-                    <span>GIGA</span>
+                    <span>MEGA</span>
                     <span class="hide">SPONSORED BY</span>
-                    <span class="hide">GIGA</span>
+                    <span class="hide">MEGA</span>
                 </div>
                 <div>
-                    <a href="https://www.linkedin.com/showcase/bit-sonae/?originalSubdomain=pt">
+                    <a href="https://www.linkedin.com/showcase/bit-sonae/?originalSubdomain=pt" target="_blank">
                         <img src="images/sponsors/bit.png" alt="BIT by Sonae MC">
                     </a>
-                    <a href="https://www.ipn.pt/incubadora/esabic/">
+                    <a href="https://www.ipn.pt/incubadora/esabic/" target="_blank">
                         <img src="images/sponsors/esa.png" alt="ESA BIC Portugal">
                     </a>
-                    <a href="https://feedzai.com/">
+                    <a href="https://feedzai.com/" target="_blank">
                         <img src="images/sponsors/feedzai.png" alt="Feedzai">
                     </a>
-                    <a href="https://ubiwhere.com/">
+                    <a href="https://ubiwhere.com/" target="_blank">
                         <img src="images/sponsors/ubiwhere.png" alt="Ubiwhere">
                     </a>
                 </div>
@@ -490,7 +490,7 @@
                     <span class="hide">KAPA</span>
                 </div>
                 <div>
-                    <a href="https://www.celfocus.com/">
+                    <a href="https://www.celfocus.com/" target="_blank">
                         <img src="images/sponsors/celfocus.png" alt="Celfocus">
                     </a>
                 </div>
@@ -573,11 +573,13 @@
             $("#mobile").css("position", "fixed");
             $("#mobile").css("right", "0");
             $("#mobile").css("padding-right", "2rem");
+            $("html").css("overflow-y", "hidden");
         } else {
             $("#mobile-navbar").css("display", "none");
             $('#mobile').attr('src', 'images/icons/hamburger.svg');
             $("#mobile").css("position", "inherit");
             $("#mobile").css("padding-right", "0rem");
+            $("html").css("overflow-y", "scroll");
         }
         temp++;
     });
@@ -585,6 +587,9 @@
     $("#mobile-navbar a").click(function () {
         $("#mobile-navbar").css("display", "none");
         $('#mobile').attr('src', 'images/icons/hamburger.svg');
+        $("#mobile").css("position", "inherit");
+        $("#mobile").css("padding-right", "0rem");
+        $("html").css("overflow-y", "scroll");
         temp++;
     });
 
