@@ -364,6 +364,11 @@ section {
     grid-template-columns: 3rem 1fr 1fr;
 }
 
+.slot.title-slot {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; 
+}
+
 .slot>span:first-child {
     grid-row-start: 1;
     grid-row-end: 3;
@@ -389,9 +394,15 @@ section {
 }
 
 .slot>div>span:last-child,
-.session-slot span:nth-child(2) {
+.session-slot span:nth-child(2), .title-slot span {
     font-weight: 700;
 }
+
+.slot.title-slot span {
+    justify-self: center;
+    color: var(--prim-color);
+}
+
 
 .slot .slot-image {
     height: 4rem;
