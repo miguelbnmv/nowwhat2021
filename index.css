@@ -232,16 +232,17 @@ section {
     margin-top: 8rem;
 }
 
-.countdown p:first-child {
+.countdown > p {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     color: var(--prim-color);
     font-size: 2rem;
 }
 
-.countdown p:last-child {
+.countdown a {
     color: var(--sec-color);
     font-size: 2rem;
+    text-decoration: none;
 }
 
 /*-------------------ABOUT------------------*/
@@ -594,12 +595,12 @@ footer {
         margin-top: 0;
     }
 
-    .countdown p:first-child {
+    .countdown > p {
         -webkit-text-stroke-width: 1px;
         font-size: 5rem;
     }
 
-    .countdown p:last-child {
+    .countdown a p {
         font-size: 5rem;
     }
 
